@@ -1,0 +1,390 @@
+/* PlayVideo.css - Enhanced version */
+
+/* Main container */
+.play-video {
+    flex-basis: 69%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Video container with better aspect ratio handling */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Video title */
+.video-title {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: #0f0f0f;
+}
+
+/* Video info section */
+.play-video-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.view-count {
+    font-size: 14px;
+    color: #606060;
+    margin: 0;
+}
+
+/* Action buttons */
+.video-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 18px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #0f0f0f;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #e5e5e5;
+}
+
+.action-btn svg {
+    font-size: 16px;
+}
+
+/* Dividers */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 16px 0;
+}
+
+/* Channel publisher section */
+.publisher {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.channel-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover;
+}
+
+.channel-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-name {
+    color: #0f0f0f;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 0 4px 0;
+}
+
+.subscriber-count {
+    font-size: 13px;
+    color: #606060;
+}
+
+.subscribe-btn {
+    background: #0f0f0f;
+    color: white;
+    padding: 10px 16px;
+    border: 0;
+    outline: 0;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.subscribe-btn:hover {
+    opacity: 0.9;
+}
+
+/* Video description section */
+.video-description-container {
+    margin: 16px 0;
+}
+
+.video-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0f0f0f;
+    max-height: 80px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.video-description.expanded {
+    max-height: 1000px;
+}
+
+.video-description p {
+    margin: 0 0 8px 0;
+    white-space: pre-wrap;
+}
+
+.toggle-description-btn {
+    background: none;
+    border: none;
+    color: #065fd4;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.toggle-description-btn:hover {
+    color: #0b57d0;
+    text-decoration: underline;
+}
+
+/* Comments section */
+.comments-section {
+    margin-top: 24px;
+}
+
+.comments-header {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0f0f0f;
+    margin-bottom: 24px;
+}
+
+.no-comments {
+    color: #606060;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.comment {
+    display: flex;
+    gap: 16px;
+}
+
+.commenter-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex: 1;
+}
+
+.comment-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.comment-header h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #0f0f0f;
+    margin: 0;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #606060;
+}
+
+.comment-text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #0f0f0f;
+    margin: 4px 0 8px 0;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.comment-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    padding: 6px 0;
+    font-size: 12px;
+    color: #606060;
+    cursor: pointer;
+}
+
+.comment-action-btn:hover {
+    color: #0f0f0f;
+}
+
+.reply-btn {
+    font-weight: 500;
+}
+
+.comment-pagination {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.show-more-btn, .show-less-btn {
+    background: #f2f2f2;
+    border: none;
+    border-radius: 18px;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #0f0f0f;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.show-more-btn:hover, .show-less-btn:hover {
+    background-color: #e5e5e5;
+}
+
+/* Loading and error states */
+.loading-container, .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    text-align: center;
+    padding: 24px;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    font-size: 32px;
+    color: #ff0000;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.retry-btn {
+    margin-top: 16px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Responsive design for different screen sizes */
+@media (max-width: 1024px) {
+    .play-video {
+        flex-basis: 100%;
+    }
+    
+    .play-video-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .video-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-title {
+        font-size: 1.2rem;
+    }
+    
+    .action-btn {
+        padding: 6px 12px;
+    }
+    
+    .action-btn span {
+        display: none;
+    }
+    
+    .publisher {
+        flex-wrap: wrap;
+    }
+    
+    .subscribe-btn {
+        margin-top: 12px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-actions {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    
+    .channel-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .comment {
+        gap: 8px;
+    }
+    
+    .commenter-avatar {
+        width: 32px;
+        height: 32px;
+    }
+}
